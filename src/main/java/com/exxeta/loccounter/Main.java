@@ -7,5 +7,4 @@ public class Main {
   public static void main(String[] args) {
     Coordinator.start("../../../../../../test/java/adapters");
   }
-
 }

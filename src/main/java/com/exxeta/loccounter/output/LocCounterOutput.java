@@ -5,7 +5,7 @@ import java.util.List;
 
 public class LocCounterOutput {
 
-  private List<LocFile> locFiles;
+  private final List<LocFile> locFiles;
   private int linesSum;
   private int linesOfCodeSum;
 
@@ -15,18 +15,19 @@ public class LocCounterOutput {
     calculateTotalLinesOfCode();
   }
 
-  public void calculateTotalLines(){
-     locFiles.forEach(file -> linesSum += file.getLines());
+  public void calculateTotalLines() {
+    locFiles.forEach(file -> linesSum += file.getLines());
   }
 
-  public void calculateTotalLinesOfCode(){
+  public void calculateTotalLinesOfCode() {
     locFiles.forEach(file -> linesOfCodeSum += file.getLinesOfCode());
   }
 
-  public String toString(){
+  public String toString() {
     var outputString = new StringBuilder();
     locFiles.forEach(locFile -> outputString.append(locFile.toString()).append("//n"));
-    outputString.append("Total://nLines://n").append(linesSum).append("//LOC:").append(linesOfCodeSum);
+    outputString.append("Total://nLines://n").append(linesSum).append("//LOC:")
+        .append(linesOfCodeSum);
 
     return outputString.toString();
   }

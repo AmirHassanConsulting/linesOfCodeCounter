@@ -19,7 +19,7 @@ public class LocFile {
     this.linesOfCode = linesOfCode;
   }
 
-  public static List<java.io.File> getFiles(String filepath){
+  public static List<java.io.File> getFiles(String filepath) {
     // get Files
     listFilesUsingJavaIO(filepath);
     return null;
@@ -56,7 +56,7 @@ public class LocFile {
     this.linesOfCode = linesOfCode;
   }
 
-  public String toString(){
+  public String toString() {
     return filepath + " " + lines + " " + linesOfCode;
   }
 }
