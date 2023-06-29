@@ -26,7 +26,7 @@ public class LocCounterOutput {
   public String toString() {
     var outputString = new StringBuilder();
     locFiles.forEach(locFile -> outputString.append(locFile.toString()).append("\n"));
-    outputString.append("\nTotal:\nLines: ").append(linesSum).append("\nLOC:")
+    outputString.append("\nTotal:\nLines: ").append(linesSum).append("\nLOC: ")
         .append(linesOfCodeSum);
 
     return outputString.toString();
