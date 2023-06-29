@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class InputReader {
- 
+
   public static List<LocFile> getLocFiles(List<File> files) {
     List<LocFile> locFiles = new ArrayList<>(files.size());
     for (File file : files) {
@@ -38,6 +38,9 @@ public class InputReader {
   }
 
   private static boolean isCode(String line) {
+    if (line == null) {
+      return false;
+    }
     return line.trim().startsWith("//") || line.trim().startsWith("*") || line.isEmpty();
   }
 }

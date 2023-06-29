@@ -1,10 +1,11 @@
-package adapters;
+package com.exxeta.loccounter.util.database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-class DB {
+public class DB {
+
   /**
    * This method generates a database connection.
    *
@@ -14,7 +15,8 @@ class DB {
    * @return The database connection object
    * @throws SQLException If an error occurs while establishing the connection
    */
-  public static Connection generateConnection(String url, String username, String password) throws SQLException {
+  public static Connection generateConnection(String url, String username, String password)
+      throws SQLException {
     try {
       // Load the JDBC driver
       Class.forName("com.mysql.jdbc.Driver");

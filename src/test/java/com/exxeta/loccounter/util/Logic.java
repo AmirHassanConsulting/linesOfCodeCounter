@@ -1,12 +1,11 @@
-package logic;
+package com.exxeta.loccounter.util;
 
 import java.util.Properties;
-
 
 /**
  * This class is responsible for sending marketing emails.
  */
-public class logic {
+public class Logic {
 
   private String from;
   private String to;
@@ -21,7 +20,7 @@ public class logic {
    * @param subject The subject of the email
    * @param body    The body of the email
    */
-  public logic(String from, String to, String subject, String body) {
+  public Logic(String from, String to, String subject, String body) {
     this.from = from;
     this.to = to;
     this.subject = subject;
@@ -42,5 +41,5 @@ public class logic {
     props.put("mail.smtp.starttls.enable", "true");
 
     // Get the default Session object.
-    }
+  }
 }
