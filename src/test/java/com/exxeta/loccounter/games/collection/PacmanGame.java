@@ -116,4 +116,3 @@ public class PacmanGame extends JPanel implements ActionListener {
     frame.setVisible(true);
   }
 }
-
