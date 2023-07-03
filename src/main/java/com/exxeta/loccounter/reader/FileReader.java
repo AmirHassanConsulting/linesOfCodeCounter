@@ -13,8 +13,10 @@ import java.util.List;
 public class FileReader {
 
   /**
-   * @param files
-   * @return
+   * Transforms a list of files to a list with the customized representation of LocFile.
+   *
+   * @param files The list of files that should be transformed
+   * @return a list of LocFiles
    */
   public List<LocFile> getLocFiles(List<File> files) {
     List<LocFile> locFiles = new ArrayList<>(files.size());
@@ -25,8 +27,10 @@ public class FileReader {
   }
 
   /**
-   * @param filepath
-   * @return
+   * Builds a LocFile from the given filepath.
+   *
+   * @param filepath The filepath from which the LocFile should be created
+   * @return the newly build LocFile
    */
   private static LocFile createLocFile(String filepath) {
     var locFile = new LocFile(filepath);
@@ -49,8 +53,11 @@ public class FileReader {
   }
 
   /**
-   * @param line
-   * @return
+   * Retrieves if a line is line of code or not.
+   *
+   * @param line a single line of a file
+   * @return false if line is null, empty or is a single line comment that starts with '//',
+   * otherwise true.
    */
   private static boolean isLineOfCode(String line) {
     return line != null && !(line.trim().startsWith("//") || line.isEmpty());

@@ -5,7 +5,9 @@ import com.exxeta.loccounter.output.dto.LocCounterOutput;
 public class Printer {
 
   /**
-   * @param locCounterOutput
+   * Prints the LocCounterOutput to console.
+   *
+   * @param locCounterOutput The given LocCounterOutput
    */
   public void print(LocCounterOutput locCounterOutput) {
     System.out.println(locCounterOutput);

@@ -1,9 +1,23 @@
 package com.exxeta.loccounter.reader.dto;
 
+/**
+ * The DTO to represent a File in the linesOfCodeCounter context.
+ */
 public class LocFile {
 
+  /**
+   * The full filepath of a file.
+   */
   private final String filepath;
+
+  /**
+   * The amount of lines in a file.
+   */
   private int lines;
+  
+  /**
+   * The amount of lines of code in a file.
+   */
   private int linesOfCode;
 
   public LocFile(String filepath) {

@@ -8,7 +8,11 @@ import com.exxeta.loccounter.reader.FileReader;
 public class Processor {
 
   /**
-   * @param filepath
+   * Central method to call all classes for retrieving and converting the desired files and for
+   * printing the calculation result to the console.
+   *
+   * @param filepath The filepath in which the files should be searched, converted and used for
+   *                 calculation.
    */
   public void process(String filepath) {
     var fileCollector = new FileCollector();
